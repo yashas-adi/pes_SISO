@@ -20,23 +20,53 @@ module tb_pes_siso;
 
   // Testbench stimulus
   initial begin
+$dumpfile("tb_pes_siso.vcd");
+	$dumpvars(0,tb_pes_siso);
     clk = 0;
     reset = 1;      // Reset initially
-    serial_in = 0;  // Set your serial input here
+    // serial_in = 0;  // Set your serial input here (remove this line)
 
     // Apply reset and serial input
     #10 reset = 0;
-    #10 reset = 1;
+   
 
     // Apply serial input values and check serial output
     $display("Time\tSerial In\tSerial Out");
-    for (integer i = 0; i < 16; i = i + 1) begin
-      serial_in = i[0]; // Set serial input
-      #10; // Wait for one clock cycle
+     begin
+      serial_in = 1'b1; // Set serial input
+      #10;
+      serial_in = 1'b0; // Set serial input
+      #10; 
+      serial_in = 1'b1; // Set serial input
+      #10;
+      serial_in = 1'b0; // Set serial input
+      #10;
+      serial_in = 1'b1; // Set serial input
+      #10;
+      serial_in = 1'b1; // Set serial input
+      #10;
+      serial_in = 1'b0; // Set serial input
+      #10; 
+      serial_in = 1'b1; // Set serial input
+      #10;
+      serial_in = 1'b0; // Set serial input
+      #10;
+      serial_in = 1'b1; // Set serial input
+      #10;serial_in = 1'b1; // Set serial input
+      #10;
+      serial_in = 1'b0; // Set serial input
+      #10; 
+      serial_in = 1'b1; // Set serial input
+      #10;
+      serial_in = 1'b0; // Set serial input
+      #10;
+      serial_in = 1'b1; // Set serial input
+      #10;// Wait for one clock cycle
       $display("%d\t%d\t%d", $time, serial_in, serial_out);
     end
 
     $finish; // End simulation
   end
+
 
 endmodule
