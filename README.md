@@ -1,3 +1,12 @@
+
+simulation screen shot 
+
+![image](https://github.com/yashas-adi/pes_SISO/assets/142563983/e5b08d8b-fff6-4e35-b4ef-f0f93b658aac)
+
+
+![image](https://github.com/yashas-adi/pes_SISO/assets/142563983/30fb75f9-bf33-4676-8e7b-f13cce5b870e)
+
+
 the yosys screen shots 
 
 ![image](https://github.com/yashas-adi/pes_SISO/assets/142563983/1025c6ea-ffa8-402d-88f6-bd3d0918b773)
